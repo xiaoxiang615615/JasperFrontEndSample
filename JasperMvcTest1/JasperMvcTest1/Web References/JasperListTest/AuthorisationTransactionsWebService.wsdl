@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://webservice.authorisationtransactions.newhope.com" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://webservice.authorisationtransactions.newhope.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://webservice.authorisationtransactions.newhope.com">
+      <xs:element name="getAuthorisationComments">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="zwrkun" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAuthorisationCommentsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getUserGroup">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="schema" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getUserGroupResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getZAUTHEAD">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="zautyp" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zrolln" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zwrkun" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zwrkti" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="rgtm" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="rgdt" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zcurln" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zpurcn" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zausts" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="itds" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="sunm" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="sino" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="puno" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="plpn" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zprvrn" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="conm" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="fromAmount" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="toAmount" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="supplier" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="invoiceNumber" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="poNumber" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="plannedOrderNumber" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="currentUser" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="isOpenTransactionsOnly" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="authentication" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getZAUTHEADResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getZAUTLINE">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="zwrkun" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="rgdt" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="rgtm" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zauact" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zusrnm" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zrolln" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zdelfn" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getZAUTLINEResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getZautheadDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="divi" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zwrkun" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getZautheadDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="webServiceTestResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getZAUTHEADRequest">
+    <wsdl:part name="parameters" element="ns:getZAUTHEAD" />
+  </wsdl:message>
+  <wsdl:message name="getZAUTHEADResponse">
+    <wsdl:part name="parameters" element="ns:getZAUTHEADResponse" />
+  </wsdl:message>
+  <wsdl:message name="getZAUTLINERequest">
+    <wsdl:part name="parameters" element="ns:getZAUTLINE" />
+  </wsdl:message>
+  <wsdl:message name="getZAUTLINEResponse">
+    <wsdl:part name="parameters" element="ns:getZAUTLINEResponse" />
+  </wsdl:message>
+  <wsdl:message name="getZautheadDetailRequest">
+    <wsdl:part name="parameters" element="ns:getZautheadDetail" />
+  </wsdl:message>
+  <wsdl:message name="getZautheadDetailResponse">
+    <wsdl:part name="parameters" element="ns:getZautheadDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAuthorisationCommentsRequest">
+    <wsdl:part name="parameters" element="ns:getAuthorisationComments" />
+  </wsdl:message>
+  <wsdl:message name="getAuthorisationCommentsResponse">
+    <wsdl:part name="parameters" element="ns:getAuthorisationCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="webServiceTestRequest" />
+  <wsdl:message name="webServiceTestResponse">
+    <wsdl:part name="parameters" element="ns:webServiceTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserGroupRequest">
+    <wsdl:part name="parameters" element="ns:getUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="getUserGroupResponse">
+    <wsdl:part name="parameters" element="ns:getUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AuthorisationTransactionsWebServicePortType">
+    <wsdl:operation name="getZAUTHEAD">
+      <wsdl:input wsaw:Action="urn:getZAUTHEAD" message="ns:getZAUTHEADRequest" />
+      <wsdl:output wsaw:Action="urn:getZAUTHEADResponse" message="ns:getZAUTHEADResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getZAUTLINE">
+      <wsdl:input wsaw:Action="urn:getZAUTLINE" message="ns:getZAUTLINERequest" />
+      <wsdl:output wsaw:Action="urn:getZAUTLINEResponse" message="ns:getZAUTLINEResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getZautheadDetail">
+      <wsdl:input wsaw:Action="urn:getZautheadDetail" message="ns:getZautheadDetailRequest" />
+      <wsdl:output wsaw:Action="urn:getZautheadDetailResponse" message="ns:getZautheadDetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthorisationComments">
+      <wsdl:input wsaw:Action="urn:getAuthorisationComments" message="ns:getAuthorisationCommentsRequest" />
+      <wsdl:output wsaw:Action="urn:getAuthorisationCommentsResponse" message="ns:getAuthorisationCommentsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="webServiceTest">
+      <wsdl:input wsaw:Action="urn:webServiceTest" message="ns:webServiceTestRequest" />
+      <wsdl:output wsaw:Action="urn:webServiceTestResponse" message="ns:webServiceTestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserGroup">
+      <wsdl:input wsaw:Action="urn:getUserGroup" message="ns:getUserGroupRequest" />
+      <wsdl:output wsaw:Action="urn:getUserGroupResponse" message="ns:getUserGroupResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AuthorisationTransactionsWebServiceSoap11Binding" type="ns:AuthorisationTransactionsWebServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getZAUTLINE">
+      <soap:operation soapAction="urn:getZAUTLINE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZAUTHEAD">
+      <soap:operation soapAction="urn:getZAUTHEAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZautheadDetail">
+      <soap:operation soapAction="urn:getZautheadDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthorisationComments">
+      <soap:operation soapAction="urn:getAuthorisationComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserGroup">
+      <soap:operation soapAction="urn:getUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceTest">
+      <soap:operation soapAction="urn:webServiceTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthorisationTransactionsWebServiceSoap12Binding" type="ns:AuthorisationTransactionsWebServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getZAUTLINE">
+      <soap12:operation soapAction="urn:getZAUTLINE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZAUTHEAD">
+      <soap12:operation soapAction="urn:getZAUTHEAD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZautheadDetail">
+      <soap12:operation soapAction="urn:getZautheadDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthorisationComments">
+      <soap12:operation soapAction="urn:getAuthorisationComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserGroup">
+      <soap12:operation soapAction="urn:getUserGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceTest">
+      <soap12:operation soapAction="urn:webServiceTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthorisationTransactionsWebServiceHttpBinding" type="ns:AuthorisationTransactionsWebServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getZAUTLINE">
+      <http:operation location="AuthorisationTransactionsWebService/getZAUTLINE" />
+      <wsdl:input>
+        <mime:content part="getZAUTLINE" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getZAUTLINE" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZAUTHEAD">
+      <http:operation location="AuthorisationTransactionsWebService/getZAUTHEAD" />
+      <wsdl:input>
+        <mime:content part="getZAUTHEAD" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getZAUTHEAD" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZautheadDetail">
+      <http:operation location="AuthorisationTransactionsWebService/getZautheadDetail" />
+      <wsdl:input>
+        <mime:content part="getZautheadDetail" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getZautheadDetail" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthorisationComments">
+      <http:operation location="AuthorisationTransactionsWebService/getAuthorisationComments" />
+      <wsdl:input>
+        <mime:content part="getAuthorisationComments" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getAuthorisationComments" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserGroup">
+      <http:operation location="AuthorisationTransactionsWebService/getUserGroup" />
+      <wsdl:input>
+        <mime:content part="getUserGroup" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getUserGroup" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceTest">
+      <http:operation location="AuthorisationTransactionsWebService/webServiceTest" />
+      <wsdl:input>
+        <mime:content part="webServiceTest" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="webServiceTest" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthorisationTransactionsWebService">
+    <wsdl:port name="AuthorisationTransactionsWebServiceHttpSoap11Endpoint" binding="ns:AuthorisationTransactionsWebServiceSoap11Binding">
+      <soap:address location="http://192.168.20.181:5050/comactivity/axis2services/AuthorisationTransactionsWebService.AuthorisationTransactionsWebServiceHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="AuthorisationTransactionsWebServiceHttpSoap12Endpoint" binding="ns:AuthorisationTransactionsWebServiceSoap12Binding">
+      <soap12:address location="http://192.168.20.181:5050/comactivity/axis2services/AuthorisationTransactionsWebService.AuthorisationTransactionsWebServiceHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="AuthorisationTransactionsWebServiceHttpEndpoint" binding="ns:AuthorisationTransactionsWebServiceHttpBinding">
+      <http:address location="http://192.168.20.181:5050/comactivity/axis2services/AuthorisationTransactionsWebService.AuthorisationTransactionsWebServiceHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

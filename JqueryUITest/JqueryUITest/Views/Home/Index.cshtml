@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<style>
+    #test {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        border: 1px solid #000;
+    }
+</style>
+
+<button id="testButton">toggle the div</button>
+<div id="test"></div>
+
+<script>
+    $(document).ready(function () {
+        $("#testButton").click(function () {
+            $("#test").toggle("fold");
+        })
+    });
+    
+    var counter = 0;
+
+    $(document).ready(function () {
+    
+            setInterval(alert, 5000);
+    
+    })
+
+    function alert() {
+        console.log("Working!!");
+    }
+</script>

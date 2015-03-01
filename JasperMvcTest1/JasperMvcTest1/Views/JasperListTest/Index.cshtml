@@ -1,0 +1,167 @@
+﻿@model List<JasperMvcTest1.Models.ZAUTHEAD>
+@{
+    ViewBag.Title = "JapserListTest";
+    var grid = new WebGrid(source: Model, defaultSort: "zrolln", rowsPerPage: 15, selectionFieldName: "selectedRow");
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/JasperListCSS.css">
+<script>
+    function EnterDown(e, value) {
+        if (e.keyCode == 13) {
+            var form = $('<form></form>');
+            form.attr("method", "post");
+            form.attr("action", "JasperListTest/JasperPostTest/");
+            var formField = document.createElement("input");
+            formField.setAttribute("type", "hidden");
+            formField.setAttribute("name", "test");
+            formField.setAttribute("value", "test123");
+            form.append(formField);
+            $(document.body).append(form);
+            form.submit();
+        }
+    }
+</script>
+<style>
+    .table{
+        border: 0px;
+        border-collapse: collapse;
+       
+    }
+
+    .header {
+        padding: 6px 5px;
+        text-align: center;
+        background-color: #e8eef4;
+        border-bottom: 2px solid #3966A2;
+        border-top: 2px solid #D6E8FF;
+        border-left: 2px solid #D6E8FF;
+        border-right: 2px solid #D6E8FF;
+        white-space: nowrap;
+    }
+
+    .clickable {
+        cursor: pointer;
+        background: #ffff99;
+    }
+</style>
+
+
+<h2>JapserListTest</h2>
+
+<div id="grid" style="overflow: auto;">
+    @grid.GetHtml(
+                tableStyle: "table",
+                headerStyle: "header",
+                alternatingRowStyle: "alternate",
+                
+                columns: grid.Columns(
+                                grid.Column("zautyp", "Authorisation Type", format:@<text>@item.GetSelectLink("zautyp")</text>),
+                                grid.Column("zrolln", "Current Role's Name"),
+                                grid.Column("zwrkun", "Work Unit No"),
+                                grid.Column("zwrkti", "Work Unit Title"),
+                                grid.Column("rgtm", "Entry time"),
+                                grid.Column("rgdt", "Entry date"),
+                                grid.Column("zcurln", "Current Line Amount"),
+                                grid.Column("zpurcn", "Requisitioned By"),
+                                grid.Column("zausts", "Authorisation Status"),
+                                grid.Column("itds", "Name"),
+                                grid.Column("sunm", "Sup name"),
+                                grid.Column("sino", "Sup inv no"),
+                                grid.Column("puno", "PO no"),
+                                grid.Column("plpn", "Planned order"),
+                                grid.Column("zprvrn", "Previous Role"),
+                                grid.Column("conm", "Division")
+                                 )
+                             )
+    @if(grid.HasSelection)
+    {
+        @RenderPage("~/Views/Home/Index.cshtml");
+    }
+    @section script{
+    <script type="text/javascript">
+      $(function(){
+          $('tbody tr').live('hover', function(){
+              $(this).toggleClass('clickable');
+          }).live('click', function(){
+              location.href = "Home/Index";  
+          }); 
+      });
+    </script>
+}
+</div>
+
+@*<div style="height: 600px; overflow: auto;">
+    <table>
+        <tr>
+            <th>
+                Authorisation Type<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " onkeypress="return EnterDown(event, this.value)" />
+            </th>
+            <th>
+                Current Role's Name<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Work Unit No<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Work Unit Title<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Entry time<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Entry date<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Current Line Amount<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Requisitioned By<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Authorisation Status<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Name<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Sup name<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Sup inv no<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                PO no<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Planned order<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Previous Role<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+            <th>
+                Division<br /><input type="text" id="JasperSearchTest" name="zrolln" value=" " />
+            </th>
+        </tr>
+        @foreach (var zauthead in Model)
+        {
+            <tr>
+                <td>@zauthead.zautyp</td>
+                <td>@zauthead.zrolln</td>
+                <td>@zauthead.zwrkun</td>
+                <td>@zauthead.zwrkti</td>
+                <td>@zauthead.rgtm</td>
+                <td>@zauthead.rgdt</td>
+                <td>@zauthead.zcurln</td>
+                <td>@zauthead.zpurcn</td>
+                <td>@zauthead.zausts</td>
+                <td>@zauthead.itds</td>
+                <td>@zauthead.sunm</td>
+                <td>@zauthead.sino</td>
+                <td>@zauthead.puno</td>
+                <td>@zauthead.plpn</td>
+                <td>@zauthead.zprvrn</td>
+                <td>@zauthead.conm</td>
+            </tr>
+        }
+    </table>
+</div>*@

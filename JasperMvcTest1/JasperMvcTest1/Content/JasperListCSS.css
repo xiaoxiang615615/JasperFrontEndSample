@@ -1,0 +1,7 @@
+﻿table {table-layout:fixed}
+td {overflow:hidden; white-space:nowrap}
+
+.clickable{
+    cursor: pointer;
+    background: #ffff99;
+}

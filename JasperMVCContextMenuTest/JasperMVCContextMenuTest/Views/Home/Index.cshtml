@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="context-menu-one box menu-1">
+    <strong>right click me</strong>
+</div>
+<script type="text/javascript" class="showcase">
+    $(function () {
+        $.contextMenu({
+            selector: '.context-menu-one',
+            callback: function (key, options) {
+                var m = "clicked: " + key;
+                window.console && console.log(m) || alert(m);
+            },
+            items: {
+                "edit": { name: "Edit" },
+                "cut": { name: "Cut" },
+                "copy": { name: "Copy" },
+                "paste": { name: "Paste" },
+                "delete": { name: "Delete" },
+                "sep1": "---------",
+                "quit": { name: "Quit" }
+            }
+        });
+
+    });
+</script>
